@@ -1,0 +1,13 @@
+diff --git a/node_modules/rupiah-format/index.js b/node_modules/rupiah-format/index.js
+index b6f0dc4..6a60488 100644
+--- a/node_modules/rupiah-format/index.js
++++ b/node_modules/rupiah-format/index.js
+@@ -9,7 +9,7 @@ module.exports = {
+                 tempNum[i] = `.${tempNum[i]}`
+             }
+         }
+-        rupiah = `Rp. ${tempNum.reverse().join("")},00`
++        rupiah = `Rp. ${tempNum.reverse().join("")}`
+         return rupiah
+     }
+ 
