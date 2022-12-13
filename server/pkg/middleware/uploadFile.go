@@ -96,15 +96,3 @@ func UploadFile(next http.HandlerFunc) http.HandlerFunc {
 		next.ServeHTTP(w, r.WithContext(ctx))
 	})
 }
-
-    // write this byte array to our temporary file
-    tempFile.Write(fileBytes)
-
-    data := tempFile.Name()
-    filename := data[8:] // split uploads/
-
-    // add filename to ctx
-    ctx := context.WithValue(r.Context(), "dataFile", filename)
-    next.ServeHTTP(w, r.WithContext(ctx))
-  })
-}
