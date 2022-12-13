@@ -61,12 +61,12 @@ func UploadFile(next http.HandlerFunc) http.HandlerFunc {
 		// setup max-upload
 		const MAX_UPLOAD_SIZE = 10 << 20
 		r.ParseMultipartForm(MAX_UPLOAD_SIZE)
-		if r.ContentLength > MAX_UPLOAD_SIZE {
-			w.WriteHeader(http.StatusBadRequest)
-			response := Result{Code: http.StatusBadRequest, Message: "Max size in 1mb"}
-			json.NewEncoder(w).Encode(response)
-			return
-		}
+// 		if r.ContentLength > MAX_UPLOAD_SIZE {
+// 			w.WriteHeader(http.StatusBadRequest)
+// 			response := Result{Code: http.StatusBadRequest, Message: "Max size in 1mb"}
+// 			json.NewEncoder(w).Encode(response)
+// 			return
+// 		}
 
 		// Create a temporary file within our temp-images directory that follows
 		// a particular naming pattern
